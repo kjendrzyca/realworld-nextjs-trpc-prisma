@@ -6,6 +6,7 @@ Read this first:
 
 - `architecture.md` explains the app shape, request flow, and module boundaries.
 - `reading-paths.md` lists the files to read before common task types.
+- `env-and-mcp.md` explains local environment handling and when browser/MCP tools are useful.
 
 Keep `AGENTS.md` short. Put durable project knowledge in `docs/`, and leave pointers in `AGENTS.md`.
 
@@ -30,6 +31,7 @@ Good candidates:
 - A task needs the same file set repeatedly.
 - A test command has a precondition.
 - A recurring agent mistake can be prevented by a short rule.
+- A repo-local skill captures a repeated workflow better than another `AGENTS.md` bullet.
 
 Bad candidates:
 

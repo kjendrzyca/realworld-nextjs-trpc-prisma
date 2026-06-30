@@ -23,11 +23,17 @@ Before changing code, read the files that define the behavior you are about to t
 - For project orientation, start with `docs/index.md`.
 - For architecture context, read `docs/architecture.md`.
 - For task-specific file sets, use `docs/reading-paths.md`.
+- If you edit a folder with its own `AGENTS.md`, read that nested file too.
 - API or database task: read `prisma/schema.prisma`, `src/server/db.ts`, `src/server/api/trpc.ts`, `src/server/api/routers/index.ts`, and the relevant router.
 - UI task: read the target page in `src/pages/`, the related component in `src/components/`, and `src/lib/api.ts`.
 - Auth task: read `src/server/api/routers/authentication.ts`, `src/env.mjs`, and any page/component that handles login state.
 - Article, favorite, profile, tag, or comment task: read the matching router and the matching page/component before editing.
 - Test task: read the existing test file and the script that runs it before changing test behavior.
+
+## Local Skills
+
+- Use `.agents/skills/realworld-feature-pass/SKILL.md` for feature work that touches more than one layer.
+- Use skills for repeatable workflows. Keep one-off task context in the current plan or notes instead.
 
 ## Verification
 
