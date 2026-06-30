@@ -20,6 +20,9 @@ This is a RealWorld example app built with Next.js pages router, tRPC, Prisma, S
 
 Before changing code, read the files that define the behavior you are about to touch. Do not rely only on search results or a single open file.
 
+- For project orientation, start with `docs/index.md`.
+- For architecture context, read `docs/architecture.md`.
+- For task-specific file sets, use `docs/reading-paths.md`.
 - API or database task: read `prisma/schema.prisma`, `src/server/db.ts`, `src/server/api/trpc.ts`, `src/server/api/routers/index.ts`, and the relevant router.
 - UI task: read the target page in `src/pages/`, the related component in `src/components/`, and `src/lib/api.ts`.
 - Auth task: read `src/server/api/routers/authentication.ts`, `src/env.mjs`, and any page/component that handles login state.
