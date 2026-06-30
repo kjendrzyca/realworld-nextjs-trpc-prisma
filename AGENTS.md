@@ -24,6 +24,8 @@ Before changing code, read the files that define the behavior you are about to t
 - For architecture context, read `docs/architecture.md`.
 - For task-specific file sets, use `docs/reading-paths.md`.
 - For planning thresholds, read `docs/planning.md`.
+- For verification strategy, read `docs/testing.md`.
+- For review strategy, read `docs/review.md`.
 - If you edit a folder with its own `AGENTS.md`, read that nested file too.
 - API or database task: read `prisma/schema.prisma`, `src/server/db.ts`, `src/server/api/trpc.ts`, `src/server/api/routers/index.ts`, and the relevant router.
 - UI task: read the target page in `src/pages/`, the related component in `src/components/`, and `src/lib/api.ts`.
@@ -34,6 +36,7 @@ Before changing code, read the files that define the behavior you are about to t
 ## Local Skills
 
 - Use `.agents/skills/realworld-feature-pass/SKILL.md` for feature work that touches more than one layer.
+- Use `.agents/skills/realworld-review-pass/SKILL.md` for reviewing agent-generated changes.
 - Use skills for repeatable workflows. Keep one-off task context in the current plan or notes instead.
 
 ## Planning

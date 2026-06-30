@@ -8,6 +8,9 @@ Read this first:
 - `reading-paths.md` lists the files to read before common task types.
 - `env-and-mcp.md` explains local environment handling and when browser/MCP tools are useful.
 - `planning.md` explains when to use a mini-plan and when to create an ExecPlan.
+- `testing.md` explains the verification ladder for code, API, UI, and browser smoke checks.
+- `review.md` explains how to review agent-generated work.
+- `training/full-cycle-demo.md` is the guided end-to-end exercise for the demo.
 - `exec-plans/create-plan-file.md` is the repo-local ExecPlan creation guide.
 
 Keep `AGENTS.md` short. Put durable project knowledge in `docs/`, and leave pointers in `AGENTS.md`.
