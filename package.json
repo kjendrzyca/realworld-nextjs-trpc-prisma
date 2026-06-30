@@ -49,6 +49,7 @@
     "eslint": "^8.56.0",
     "eslint-config-next": "^13.5.6",
     "eslint-plugin-deprecation": "^2.0.0",
+    "newman": "^6.2.1",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",
     "prisma": "^5.18.0",
@@ -59,5 +60,13 @@
   },
   "prisma": {
     "seed": "node ./prisma/seed.js"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "bcrypt",
+      "prisma"
+    ]
   }
 }
