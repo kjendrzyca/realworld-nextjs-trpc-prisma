@@ -7,6 +7,8 @@ Read this first:
 - `architecture.md` explains the app shape, request flow, and module boundaries.
 - `reading-paths.md` lists the files to read before common task types.
 - `env-and-mcp.md` explains local environment handling and when browser/MCP tools are useful.
+- `planning.md` explains when to use a mini-plan and when to create an ExecPlan.
+- `exec-plans/create-plan-file.md` is the repo-local ExecPlan creation guide.
 
 Keep `AGENTS.md` short. Put durable project knowledge in `docs/`, and leave pointers in `AGENTS.md`.
 

@@ -23,6 +23,7 @@ Before changing code, read the files that define the behavior you are about to t
 - For project orientation, start with `docs/index.md`.
 - For architecture context, read `docs/architecture.md`.
 - For task-specific file sets, use `docs/reading-paths.md`.
+- For planning thresholds, read `docs/planning.md`.
 - If you edit a folder with its own `AGENTS.md`, read that nested file too.
 - API or database task: read `prisma/schema.prisma`, `src/server/db.ts`, `src/server/api/trpc.ts`, `src/server/api/routers/index.ts`, and the relevant router.
 - UI task: read the target page in `src/pages/`, the related component in `src/components/`, and `src/lib/api.ts`.
@@ -34,6 +35,13 @@ Before changing code, read the files that define the behavior you are about to t
 
 - Use `.agents/skills/realworld-feature-pass/SKILL.md` for feature work that touches more than one layer.
 - Use skills for repeatable workflows. Keep one-off task context in the current plan or notes instead.
+
+## Planning
+
+- Use a short mini-plan for small, local changes.
+- Use an ExecPlan for changes that touch multiple layers, change data model/API contracts, require migration/recovery steps, or will span more than one focused session.
+- Create ExecPlans under `docs/exec-plans/active/` using `docs/exec-plans/create-plan-file.md`.
+- Keep plans current while working. A stale plan is worse than no plan.
 
 ## Verification
 
