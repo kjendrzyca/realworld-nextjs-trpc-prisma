@@ -70,6 +70,7 @@
     "node": ">=24 <25"
   },
   "overrides": {
-    "zod-to-json-schema": "3.23.0"
+    "zod-to-json-schema": "3.23.0",
+    "eslint-import-resolver-typescript": "3.6.1"
   }
 }
