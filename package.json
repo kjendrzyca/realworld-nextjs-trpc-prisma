@@ -3,70 +3,73 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "postinstall": "node scripts/setup.cjs && prisma generate",
+    "predev": "node scripts/setup.cjs --mode=development",
     "dev": "next dev",
+    "prebuild": "node scripts/setup.cjs --mode=production",
+    "build": "next build",
+    "prestart": "node scripts/setup.cjs --mode=production",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate && prisma db push",
-    "db:seed": "prisma db seed",
-    "test:api": "./tests/api/run-api-tests.sh",
-    "test:ui": "pnpm exec playwright test"
+    "typecheck": "tsc --noEmit",
+    "db:seed": "node scripts/setup.cjs",
+    "db:push": "prisma db push",
+    "test:setup": "node --test tests/setup.test.cjs tests/api-runner.test.cjs tests/starter-data.test.cjs",
+    "test:api": "node scripts/run-api-tests.cjs",
+    "test:ui": "playwright test",
+    "browser:install": "playwright install chromium"
   },
   "dependencies": {
-    "@prisma/client": "^5.18.0",
-    "@t3-oss/env-nextjs": "^0.3.1",
-    "@tanstack/react-query": "^4.36.1",
-    "@trpc/client": "^10.45.1",
-    "@trpc/next": "^10.45.1",
-    "@trpc/react-query": "^10.45.1",
-    "@trpc/server": "^10.45.1",
-    "bcrypt": "^5.1.1",
-    "date-fns": "^2.30.0",
-    "gray-matter": "^4.0.3",
-    "jsonwebtoken": "^9.0.2",
-    "next": "^14.2.5",
-    "nextjs-cors": "^2.2.0",
+    "@prisma/client": "5.18.0",
+    "@t3-oss/env-nextjs": "0.3.1",
+    "@tanstack/react-query": "4.36.1",
+    "@trpc/client": "10.45.2",
+    "@trpc/next": "10.45.2",
+    "@trpc/react-query": "10.45.2",
+    "@trpc/server": "10.45.2",
+    "bcrypt": "5.1.1",
+    "date-fns": "2.30.0",
+    "gray-matter": "4.0.3",
+    "jsonwebtoken": "9.0.2",
+    "next": "14.2.5",
+    "nextjs-cors": "2.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "remark": "^14.0.3",
-    "remark-html": "^15.0.2",
+    "remark": "14.0.3",
+    "remark-html": "15.0.2",
     "superjson": "1.12.2",
-    "trpc-openapi": "^1.2.0",
-    "zod": "^3.22.4"
+    "trpc-openapi": "1.2.0",
+    "zod": "3.23.8",
+    "@next/env": "14.2.5"
   },
   "devDependencies": {
-    "@playwright/test": "^1.46.1",
-    "@types/bcrypt": "^5.0.2",
-    "@types/eslint": "^8.56.11",
-    "@types/jsonwebtoken": "^9.0.5",
-    "@types/node": "^18.19.45",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.2.19",
-    "@types/uuid": "^9.0.8",
+    "@playwright/test": "1.46.1",
+    "@types/bcrypt": "5.0.2",
+    "@types/eslint": "8.56.11",
+    "@types/jsonwebtoken": "9.0.6",
+    "@types/node": "24.13.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@types/uuid": "9.0.8",
     "@typescript-eslint/eslint-plugin": "6.0.0",
     "@typescript-eslint/parser": "6.0.0",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "^13.5.6",
-    "eslint-plugin-deprecation": "^2.0.0",
-    "newman": "^6.2.1",
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.2.8",
-    "prisma": "^5.18.0",
-    "typescript": "^5.5.4"
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.0",
+    "eslint-config-next": "13.5.6",
+    "eslint-plugin-deprecation": "2.0.0",
+    "newman": "6.2.2",
+    "prettier": "2.8.8",
+    "prettier-plugin-tailwindcss": "0.2.8",
+    "prisma": "5.18.0",
+    "typescript": "5.5.4"
   },
   "ct3aMetadata": {
     "initVersion": "7.17.0"
   },
-  "prisma": {
-    "seed": "node ./prisma/seed.js"
+  "engines": {
+    "node": ">=24 <25"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@prisma/client",
-      "@prisma/engines",
-      "bcrypt",
-      "prisma"
-    ]
+  "overrides": {
+    "zod-to-json-schema": "3.23.0"
   }
 }

@@ -100,7 +100,7 @@ export const authenticationRouter = createTRPCRouter({
           username: input.user.username,
           email: input.user.email,
           passwordHash,
-          image: 'https://api.realworld.io/images/smiley-cyrus.jpeg',
+          image: null,
         },
       })
 

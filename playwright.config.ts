@@ -14,15 +14,17 @@ const config: PlaywrightTestConfig = {
   timeout: 30 * 1000,
   // Test directory
   testDir: path.join(__dirname, 'tests'),
+  testMatch: '**/*.spec.ts',
   // If a test fails, retry it additional 2 times
   retries: 1,
+  workers: 2,
   // Artifacts folder where screenshots, videos, and traces are stored.
   outputDir: 'test-results/',
 
   // Run your local dev server before starting the tests:
   // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
   webServer: {
-    command: 'pnpm dev',
+    command: 'npm run dev',
     url: baseURL,
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,

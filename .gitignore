@@ -25,6 +25,13 @@
 .next
 
 .env
+.env.local
+.env.*.local
+/prisma/db.sqlite
+/prisma/db.sqlite-journal
+/prisma/db.sqlite-wal
+/prisma/db.sqlite-shm
+*.tsbuildinfo
 
 #System Files
 .DS_Store
